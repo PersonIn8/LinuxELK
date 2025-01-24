@@ -36,6 +36,7 @@
 - 포트포워딩 설정
 - Kibana를 활용한 시각화 및 대시보드 설계
 - Elasticsearch 성능 최적화
+
 <br>
 
 ## 📐 System Architecture
@@ -103,7 +104,50 @@
 
 <br>
 
-# Main 주제 : 혜택을 선택하여 쓰는 카드 상품
+# 🌟 맞춤형 카드 혜택
+### 1. **주요 타겟 고객군 정의**
+
+- **연령대**: 소비 금액이 가장 많은 **40대**
+  ![1](https://github.com/user-attachments/assets/bc997214-5bc9-42e1-b744-08412e9add17)
+
+- **회원 등급**: **골드 등급**
+  ![2](https://github.com/user-attachments/assets/0b422dfb-1042-4ae9-abb5-3862c3900540)
+
+- **지역**: **서울 및 경기 거주**
+  ![3](https://github.com/user-attachments/assets/34fb3db7-809f-4835-a4f7-5f25a9a9eddb)
+
+- **가족 구성**: **의무교육을 받고 있는 자녀**가 있는 고객
+  ![4](https://github.com/user-attachments/assets/c0574f99-a1c9-4f3d-a5af-ab9cba9765a9)
+
+
+### 2. **추천 상품 설계**
+
+- **연회비가 높은 대신, 캐시백 혜택이 많은 카드 상품**을 이 고객군에 추천
+    - **고객 관점의 이점**: 월별 카드 사용 금액에 비례한 높은 캐시백 혜택 제공
+    - **기업 관점의 이점**: 연회비를 통한 추가 수익 창출
+
+### 3. **시사점 및 비즈니스 성과**
+
+- **기업 이득**:
+    - 연회비를 많이 징수함으로써 안정적인 수익 확보 가능
+    - 높은 소비 금액을 가진 고객 유지 및 추가 유치
+- **고객 이득**:
+    - 카드 사용에 따른 직접적인 캐시백 혜택으로 만족도 증가
+    - 소비 습관에 최적화된 상품으로 실질적인 혜택 체감
+
+### 4. **추가 인사이트 및 활용 방안**
+
+- **분기별 소비 패턴 분석 기반 혜택 조정**
+    - 40대 골드 등급 고객의 **월별 주요 소비 카테고리(예: 자녀 교육비, 주유, 대형마트)**를 분석하여 분기별로 혜택 최적화.
+    - 특정 분기에 소비가 많은 항목(예: 신학기 교육비)에 대해 추가 혜택 제공.
+- **추가 고객군 발굴**
+    - 유사한 소비 패턴을 보이는 **다른 연령대** 또는 **등급**의 고객군에 대한 확장 적용 가능성 평가.
+
+### 5. **결론**
+
+본 프로젝트를 통해 도출된 고객 맞춤형 전략은 기업과 고객 모두에게 **Win-Win**이 되는 결과를 낳았습니다.
+
+이를 바탕으로 지속적으로 데이터 기반 마케팅을 활용해 효율적인 상품 설계와 고객 만족도를 향상시킬 수 있는 방안을 모색할 수 있습니다.
 
 <br>
 
@@ -163,7 +207,9 @@ Elasticsearch 서비스가 시작되지 않고 `status=78/CONFIG` 오류가 발�
    ```bash
    sudo tail -f /var/log/elasticsearch/elasticsearch.log
    ```
+   ![image](https://github.com/user-attachments/assets/f7217c27-d22b-4637-8a29-a4048c0c5b40)
 
+   
 3. **메모리 잠금 문제 해결**
    `/etc/elasticsearch/elasticsearch.yml` 파일에서 다음을 추가:
    ```yaml
@@ -179,6 +225,8 @@ Elasticsearch 서비스가 시작되지 않고 `status=78/CONFIG` 오류가 발�
 
 ## 3. Elasticsearch 연결 문제 (Unable to connect to localhost:9200)
 `curl http://localhost:9200` 명령어로 Elasticsearch에 접속할 수 없는 경우.
+![image](https://github.com/user-attachments/assets/1e20eb12-c99b-4bcb-8914-d479223b3d5e)
+
 
 ### 원인
 - Elasticsearch가 제대로 실행되지 않음
@@ -227,6 +275,9 @@ Kibana가 Elasticsearch에 연결할 수 없는 경우.
 3. **버전 호환성 확인**
    Kibana와 Elasticsearch의 버전이 호환되는지 확인.
 
+4. **포트포워딩 확인**
+   ![image](https://github.com/user-attachments/assets/4020b34f-451e-4bd2-8818-f1caa36a7abc)
+
 ---
 
 ## 5. Elasticsearch 보안 인증 관리
@@ -269,5 +320,7 @@ sudo systemctl restart elasticsearch
 ----
 
 # 🤔 회고
+이번 프로젝트를 통해 ELK 스택을 가상환경에 설치하면서 다양한 오류를 겪었고, 이를 해결하며 환경 설정의 중요성을 깊이 깨달았습니다. 특히, Elasticsearch와 Kibana의 버전을 일치시키는 것이 안정적인 스택 구성을 위해 필수적이라는 점을 느꼈습니다. 또한, 스택 간 통신을 위해 .yml 파일을 상황에 맞게 정확히 수정해야 한다는 사실을 알게 되었습니다.
 
+Windows 환경에서 사용했던 ELK 스택을 Linux 환경에 설치하며, 환경 설정을 복습하고 새로운 관점을 얻을 수 있었습니다. 더불어, ELK 스택을 활용해 데이터를 분석하고 개인화된 마케팅 전략을 설계하는 과정에서 자료의 우선순위를 정하고 시각화하는 경험을 하였습니다.
 
