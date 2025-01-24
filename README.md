@@ -1,9 +1,11 @@
-# ELK with Ubuntu
+![Header](https://capsule-render.vercel.app/api?type=soft&color=CD853F&height=150&section=header&text=ELK%20With%20Ubuntu&fontColor=FFFFFF&fontSize=60)
+
+
 <aside>
 
 ## 👨🏻‍💻 프로젝트 개요
-
-
+**고객 소비 데이터**를 기반으로 **소비 패턴과 선호도를 분석**하여 **새로운 고객군을 정의**하고, **맞춤형 카드 혜택**을 제안하는 것을 목표로 합니다. **카드 사용 데이터**를 활용해 고객의 **라이프스타일**과 **소비 취향**에 최적화된 혜택을 제공하며, **분기별 소비 패턴 분석**을 통해 **혜택 구조**를 유연하게 조정하여 **고객 만족도**를 높이고자 합니다.
+<br>
 ## 👨‍👨‍👦‍👦 팀원 소개
 | <img src="https://github.com/wns5120.png" width="200px"> | <img src="https://github.com/JaeHee-devSpace.png" width="200px"> | <img src="https://github.com/andytjdqls.png" width="200px"> | <img src="https://github.com/wild-turkey.png" width="200px"> |
 | :---: | :---: | :---: | :---: |
@@ -12,6 +14,7 @@
 ## 📚 기술 스택
  ![Requests](https://img.shields.io/badge/Requests-00599C?style=flat&logo=python&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/VSCode-007ACC?style=flat&logo=visualstudiocode&logoColor=white)  ![Logstash](https://img.shields.io/badge/Logstash-005571?style=flat&logo=elastic&logoColor=white) ![Elasticsearch](https://img.shields.io/badge/Elasticsearch-005571?style=flat&logo=elastic&logoColor=white) ![Kibana](https://img.shields.io/badge/Kibana-005571?style=flat&logo=elastic&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black) ![VirtualBox](https://img.shields.io/badge/VirtualBox-183A61?style=flat&logo=virtualbox&logoColor=white) ![MobaXterm](https://img.shields.io/badge/MobaXterm-008FBA?style=flat&logoColor=white)  ![Markdown](https://img.shields.io/badge/Markdown-000000?style=flat&logo=markdown&logoColor=white) ![ChatGPT](https://img.shields.io/badge/ChatGPT-412991?style=flat&logo=openai&logoColor=white)
 
+<br>
 
 ## 🎯 프로젝트 목표
 **실무 데이터의 분석:**
@@ -24,48 +27,43 @@
 - 분석 결과를 바탕으로 최종 사용자가 쉽게 활용할 수 있는 대시보드를 설계하고, 새로운 기능을 제안합니다.
 
        
+<br>
 
-## 💡 기술적 목표 
-**ELK 스택 설치 및 구성**:
-- 리눅스 가상 머신에 **Elasticsearch**, **Logstash**, **Kibana**를 성공적으로 설치하고, 각 구성 요소가 원활하게 작동하도록 설정합니다.
-
-**포트포워딩 설정**:
-- 리눅스 가상 머신의 **ELK 스택 포트**를 윈도우에서 접근할 수 있도록 **포트포워딩**을 설정합니다.
-
-**시각화 및 대시보드 설계**:
-- **Kibana**를 활용하여 **카드사 데이터**에 대한 다양한 시각화(예: 차트, 그래프 등)를 생성하고, 사용자 요구에 맞는 **대시보드**를 디자인합니다.
-
-**실시간 데이터 수집 및 분석**:
-- **카드 데이터를 효과적으로 수집**하고 분석하여 유의미한 인사이트를 도출합니다. **Elasticsearch**와 **Logstash**를 활용하여 **실시간 데이터**를 효율적으로 처리합니다.
-
-**실시간 데이터 시각화 및 모니터링**:
-- **Kibana**를 통해 **데이터를 실시간으로 시각화**하고 **모니터링**하여 사용자 친화적인 **대시보드**를 제공합니다.
-
-**성능 최적화**:
-- **Elasticsearch**의 성능을 최적화하여 대량의 데이터 처리 시에도 빠른 검색과 분석이 가능하도록 설정합니다.
-
-
-            
+## 💡 주요 기술적 목표 
+- LINUX OS에 ELK 스택 설치 및 설정
+- 포트포워딩 설정
+- Kibana를 활용한 시각화 및 대시보드 설계
+- Elasticsearch 성능 최적화
+<br>
 
 ## 📐 System Architecture
 
 
-## 데이터 분석 & 시각화
+<br>
+
+## 🗂️ 데이터 분석
 ### 1. 시각화 아이디어
 
-- **나이별 이용금액 비교**
-- **등급별 이용금액 비교**
-- **분기별 이용금액 비교**
-- **거주지역별 이용금액 비교**
-- **성별 이용금액 비교**
-- **OO별 특정 카테고리 이용금액 비교** (예: 가전가구주방용품 이용금액이 가장 높은 지역, 나이 등)
-- **나이별 등급 비교** (나이가 많은 사람이 VVIP 비율이 높은가?)
-- **디지털채널가입별 이용금액 비교**
-- **라이프스테이지별 이용금액 비교**
-- **VVIP+VIP와 일반 고객 비율 비교**
-- **가장 많은 이용금액을 쓴 카테고리(중분류, 대분류)**
-- **어느 업종에 VVIP가 많은지**
-- **각 등급별 이용금액의 최대값/최솟값 비교** (등급 업그레이드 기준 탐색)
+- 나이별 이용금액 비교
+- 등급별 이용금액 비교
+- 분기별 이용금액 비교
+- 거주지역별 이용금액 비교
+- 성별 이용금액 비교
+- 특정 카테고리(예: 가전/가구/주방용품) 이용금액 비교
+   - OO별(예: 지역, 나이 등) 가장 높은 이용금액
+- 나이별 등급 분포
+   - 나이가 많을수록 VVIP 비율이 높은가?
+- 디지털 채널 가입 여부별 이용금액 비교
+- 라이프 스테이지별 이용금액 비교
+- 고객 등급별 비율 비교
+   - VVIP+VIP vs 일반 고객
+- 가장 높은 이용금액을 기록한 카테고리
+   - 중분류, 대분류 기준
+- 업종별 VVIP 분포
+   - VVIP가 많은 업종 탐색
+- 등급별 이용금액의 최대값/최솟값 비교
+   - 등급 업그레이드 기준 탐색
+
 
 ---
 
@@ -100,11 +98,10 @@
 - **전처리 필요성**: 데이터의 전처리, 이상치 제거, 가공 여부를 고려하여 분석 정확도 향상.
 
 <br>
+
+# Main 주제 : 혜택을 선택하여 쓰는 카드 상품
+
 <br>
-
-
-
-
 
 # 🚀 트러블 슈팅
 
@@ -269,3 +266,5 @@ sudo systemctl restart elasticsearch
 
 # 🤔 회고
 
+
+# ![Footer](https://capsule-render.vercel.app/api?type=soft&color=CD853F&height=150&section=footer&text=Footer&fontColor=FFFFFF&fontSize=60)
