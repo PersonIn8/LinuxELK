@@ -15,10 +15,23 @@
 
 ## 🎯 프로젝트 목표
 
+- 데이터 수집 및 분석: 카드 데이터를 효과적으로 수집하고 분석하여 유의미한 인사이트를 도출할 수 있습니다.
+
+- 실시간 데이터 시각화: Elasticsearch, Logstash, Kibana(ELK 스택)를 활용하여 실시간으로 데이터를 시각화하고 모니터링할 수 있습니다.
+
+- 사용자 친화적인 대시보드 제공: 최종 사용자에게 직관적이고 이해하기 쉬운 대시보드를 제공하여 데이터에 기반한 의사 결정을 지원합니다.
+
+- 포트포워딩을 통한 접근성 향상: 윈도우 환경에서 리눅스 가상 머신의 ELK 스택에 원활하게 접근할 수 있도록 포트포워딩 설정을 구성합니다.
        
 
 ## 💡 기술적 목표 
- 
+- ELK 스택 설치 및 구성: 리눅스 가상 머신에 Elasticsearch, Logstash, Kibana를 성공적으로 설치하고, 각 구성 요소가 원활하게 작동하도록 설정합니다.
+
+- 포트포워딩 설정: 리눅스 가상 머신의 ELK 스택 포트를 윈도우에서 접근할 수 있도록 포트포워딩을 설정합니다.
+
+- 시각화 및 대시보드 설계: Kibana를 활용하여 카드사 데이터에 대한 다양한 시각화(예: 차트, 그래프 등)를 생성하고, 사용자 요구에 맞는 대시보드를 디자인합니다.
+
+- 성능 최적화: Elasticsearch의 성능을 최적화하여 대량의 데이터 처리 시에도 빠른 검색과 분석이 가능하도록 설정합니다.
             
 
 ## 📐 System Architecture
@@ -49,16 +62,14 @@
 
 **2. Elasticsearch 서비스 실패 (Status 78/CONFIG)문제**: Elasticsearch 서비스가 시작되지 않고 `status=78/CONFIG` 오류 발생.
 
+![image](https://github.com/user-attachments/assets/bf58af76-08d8-4d72-b1c6-92ea2d6fd56a)
+
+
 - **원인**: Elasticsearch의 기본 설정이 생산 환경에 적합하지 않은 경우.
 - **해결 방법**:
     - `/etc/elasticsearch/elasticsearch.yml`에서 `discovery.type: single-node`를 설정하여 싱글 노드 모드로 실행.
     - Elasticsearch 로그 확인 (`/var/log/elasticsearch/elasticsearch.log`)하여 구체적인 오류 메시지 확인.
-    - `bootstrap.mlockall` 옵션을 활성화하여 메모리 잠금 문제 해결.
-- `vm.max_map_count` 값을 증가시키는 명령어 실행:
-- bash
-- 
-- sudo sysctl -w vm.max_map_count=262144
-    - 
+
 
 **3. Elasticsearch에서 연결 문제 (Unable to connect to localhost:9200)문제**: `curl [http://localhost:9200](http://localhost:9200/)` 명령어로 Elasticsearch에 접속할 수 없는 경우.
 
@@ -79,9 +90,4 @@
 ----
 
 # 🤔 회고
-
-- 데이터를 관리하는 여러 스택간의 유기적인 활용을 실습해 볼 수 있어서 좋았습니다.
-- 그림으로만 보던 파이프라인을 구축하는 경험을 하게 되어 이해하는데 큰 도움이 되었습니다.
-- 짧은 프로젝트 기간으로 인해서 처음에 계획했었던 실시간 크롤링 기능과, 구체적인 시각화 기능을 구현하지 못해 아쉽습니다.
-
 
