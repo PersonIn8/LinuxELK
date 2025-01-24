@@ -1,4 +1,6 @@
-![Header](https://capsule-render.vercel.app/api?type=soft&color=CD853F&height=150&section=header&text=ELK%20With%20Ubuntu&fontColor=FFFFFF&fontSize=60)
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=venom&color=54B399&height=150&section=header&text=ELK%20With%20Ubuntu&fontSize=60" alt="Header" width="100%">
+</p>
 
 
 <aside>
@@ -37,7 +39,9 @@
 <br>
 
 ## 📐 System Architecture
-
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/dfefaaf0-a9bb-4eb0-826a-6d66c086173e" alt="Architecture Diagram" style="width: 80%; max-width: 800px; height: auto;">
+</div>
 
 <br>
 
@@ -267,4 +271,3 @@ sudo systemctl restart elasticsearch
 # 🤔 회고
 
 
-# ![Footer](https://capsule-render.vercel.app/api?type=soft&color=CD853F&height=150&section=footer&text=Footer&fontColor=FFFFFF&fontSize=60)
