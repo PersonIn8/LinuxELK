@@ -1,4 +1,4 @@
-# PEOPLE_IN_EIGHT 8️⃣
+# ELK with Ubuntu
 <aside>
 
 ## 👨🏻‍💻 프로젝트 개요
